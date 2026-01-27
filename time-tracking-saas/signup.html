@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - TimeFlow</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⏱️</text></svg>">
+</head>
+
+<body class="bg-surface d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand bg-transparent border-0">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="text-primary-color">Time</span>Flow</a>
+            <div class="ms-auto">
+                <a href="login.html" class="text-secondary-color fw-600 text-decoration-none font-sm">Already have an
+                    account? <span class="text-primary-color">Log in</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container d-flex flex-column justify-content-center flex-grow-1" style="max-width: 450px;">
+        <div class="text-center mb-4">
+            <h1 class="h3 fw-700">Start your free trial</h1>
+            <p class="text-secondary-color">No credit card required. 14 days free.</p>
+        </div>
+
+        <div class="glass-card p-4 rounded-4 shadow-sm border bg-white">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label fw-600 small">Full Name</label>
+                    <input type="text" class="form-control" placeholder="John Doe">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-600 small">Email address</label>
+                    <input type="email" class="form-control" placeholder="name@company.com">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-600 small">Password</label>
+                    <input type="password" class="form-control" placeholder="Create a password">
+                    <div class="form-text small">At least 8 characters.</div>
+                </div>
+                <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="terms">
+                    <label class="form-check-label small text-secondary-color" for="terms">I agree to the <a href="#"
+                            class="text-primary-color">Terms of Service</a> and <a href="#"
+                            class="text-primary-color">Privacy Policy</a>.</label>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
+                </div>
+
+                <div class="position-relative mb-4">
+                    <hr class="text-secondary-color opacity-25">
+                    <span
+                        class="position-absolute top-50 start-50 translate-middle px-2 bg-surface text-secondary-color small bg-white">OR</span>
+                </div>
+
+                <button type="button"
+                    class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2 mb-2">
+                    <span>G</span> Sign up with Google
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="text-center py-4 text-secondary-color small">
+        &copy; 2024 TimeFlow. All rights reserved.
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+/* Animations CSS */
+
+/* Fade Up Class (controlled by GSAP mostly, but initial state can be here if needed) */
+.fade-up {
+    /* GSAP will handle opacity and transform, but we ensure visibility hidden initially to avoid flash? 
+       Actually, GSAP 'from' tweens handle this best. 
+       We will leave this empty for GSAP to control, 
+       or use basic CSS transitions for non-GSAP elements. */
+}
+
+/* Soft Underline Transition */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-primary);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Micro-interactions */
+.scale-on-hover {
+    transition: transform 0.3s ease;
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.05);
+}

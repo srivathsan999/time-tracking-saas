@@ -1,0 +1,99 @@
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+    --color-bg: #020617;
+    --color-surface: #020617;
+    --color-text-primary: #F8FAFC;
+    --color-text-secondary: #CBD5E1;
+    --color-border: #1e293b;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .navbar {
+    background-color: rgba(2, 6, 23, 0.85);
+    /* Darker blur */
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile and Tablet: Solid background in dark mode */
+@media (max-width: 991.98px) {
+    [data-theme="dark"] .navbar {
+        background-color: var(--color-surface);
+        backdrop-filter: none;
+    }
+    
+    [data-theme="dark"] .navbar-collapse {
+        background-color: var(--color-surface);
+        border-top-color: var(--color-border);
+    }
+    
+    [data-theme="dark"] .navbar-collapse .dropdown-menu {
+        background-color: #0F172A;
+        border-color: var(--color-border);
+    }
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: #0F172A;
+    /* Slightly lighter than bg for dropdowns */
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-primary);
+}
+
+[data-theme="dark"] .form-control {
+    background-color: #0F172A;
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .form-control:focus {
+    background-color: #0F172A;
+    border-color: var(--color-primary);
+}
+
+/* Glassmorphism for Dark Mode (Pricing & Features ONLY) */
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .pricing-card {
+    background: rgba(255, 255, 255, 0.08);
+    /* Required Glass Card Value */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+}
+
+[data-theme="dark"] .feature-card:hover,
+[data-theme="dark"] .pricing-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Footer in Dark Mode */
+[data-theme="dark"] footer {
+    background-color: #020617;
+    border-top-color: var(--color-border);
+}
+
+/* Dashboard Header Dark Mode */
+[data-theme="dark"] .dashboard-header {
+    background-color: var(--color-surface);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .sidebar-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
