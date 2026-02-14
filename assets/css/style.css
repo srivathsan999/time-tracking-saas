@@ -10,10 +10,10 @@
     --color-text-primary: #0F172A;
     --color-text-secondary: #475569;
     --color-border: #e2e8f0;
-    
+
     /* Spacing */
     --header-height: 80px;
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -29,7 +29,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     line-height: 1.2;
     color: var(--color-text-primary);
@@ -49,11 +54,25 @@ ul {
 }
 
 /* Utilities */
-.text-primary-color { color: var(--color-primary) !important; }
-.text-secondary-color { color: var(--color-text-secondary) !important; }
-.bg-surface { background-color: var(--color-surface); }
-.fw-600 { font-weight: 600; }
-.fw-700 { font-weight: 700; }
+.text-primary-color {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary-color {
+    color: var(--color-text-secondary) !important;
+}
+
+.bg-surface {
+    background-color: var(--color-surface);
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
 
 /* Buttons */
 .btn-primary {
@@ -97,12 +116,12 @@ ul {
 }
 
 /* Mobile and Tablet: Solid background to prevent content overlap */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
     .navbar {
         background-color: var(--color-surface);
         backdrop-filter: none;
     }
-    
+
     .navbar-collapse {
         background-color: var(--color-surface);
         border-top: 1px solid var(--color-border);
@@ -113,11 +132,11 @@ ul {
         position: relative;
         z-index: 1001;
     }
-    
+
     .navbar-collapse.show {
         margin-top: 1rem;
     }
-    
+
     /* Ensure dropdowns in mobile menu have solid background */
     .navbar-collapse .dropdown-menu {
         position: static !important;
@@ -128,12 +147,12 @@ ul {
         box-shadow: none;
         border: 1px solid var(--color-border);
     }
-    
+
     /* Nav items spacing in mobile */
     .navbar-collapse .nav-item {
         margin-bottom: 0.25rem;
     }
-    
+
     .navbar-collapse .nav-link {
         padding: 0.75rem 1rem !important;
     }
@@ -151,7 +170,8 @@ ul {
     padding: 0.5rem 1rem !important;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: var(--color-primary);
 }
 
@@ -170,6 +190,27 @@ ul {
 .dropdown-item:hover {
     background-color: var(--color-bg);
     color: var(--color-primary);
+}
+
+/* Ensure dropdown-menu-end works without Popper.js */
+.dropdown-menu-end {
+    right: 0 !important;
+    left: auto !important;
+}
+
+/* Dashboard Header Responsive Tweaks */
+@media (max-width: 400px) {
+    .dashboard-header {
+        padding: 0.75rem 0.75rem !important;
+    }
+
+    .dashboard-header .d-flex.gap-3 {
+        gap: 0.5rem !important;
+    }
+
+    .dashboard-brand {
+        font-size: 1.25rem;
+    }
 }
 
 /* Hero Section */
@@ -192,13 +233,31 @@ ul {
 }
 
 /* Cards & Glassmorphism */
-.feature-card, .pricing-card {
+.feature-card,
+.pricing-card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: 1rem;
     padding: 2rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    text-align: center;
+}
+
+.pricing-card ul {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.pricing-card li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 0.5rem;
 }
 
 .glass-card {
@@ -241,7 +300,7 @@ footer {
 
 .footer-brand {
     font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--color-primary);
     margin-bottom: 1rem;
     display: block;

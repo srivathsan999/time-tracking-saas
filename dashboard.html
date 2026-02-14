@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - TimeFlow</title>
-    <meta name="description" content="TimeFlow Dashboard - Track time, manage projects, and monitor your team's productivity.">
-    
+    <meta name="description"
+        content="TimeFlow Dashboard - Track time, manage projects, and monitor your team's productivity.">
+
     <!-- CSS Assets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-    
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>TF</text></svg>">
-    
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>TF</text></svg>">
+
     <style>
         .dashboard-header {
             background-color: var(--color-surface);
@@ -25,14 +28,14 @@
             z-index: 1000;
             box-shadow: var(--shadow-sm);
         }
-        
+
         .dashboard-brand {
             font-weight: 700;
             font-size: 1.5rem;
             color: var(--color-text-primary);
             text-decoration: none;
         }
-        
+
         .sidebar-toggle {
             background: none;
             border: none;
@@ -45,11 +48,11 @@
             border-radius: 0.5rem;
             transition: all 0.2s ease;
         }
-        
+
         .sidebar-toggle:hover {
             background-color: var(--color-bg);
         }
-        
+
         .sidebar-close-btn {
             background: none;
             border: none;
@@ -62,18 +65,18 @@
             border-radius: 0.5rem;
             transition: all 0.2s ease;
         }
-        
+
         .sidebar-close-btn:hover {
             background-color: var(--color-bg);
             color: var(--color-text-primary);
         }
-        
+
         .dashboard-container {
             padding-top: 2rem;
             min-height: calc(100vh - 80px);
             background-color: var(--color-bg);
         }
-        
+
         .dashboard-sidebar {
             background-color: var(--color-surface);
             border-right: 1px solid var(--color-border);
@@ -84,7 +87,7 @@
             transition: transform 0.3s ease;
             z-index: 999;
         }
-        
+
         /* Mobile/Tablet Sidebar */
         @media (max-width: 991.98px) {
             .dashboard-sidebar {
@@ -99,11 +102,11 @@
                 box-shadow: var(--shadow-lg);
                 overflow-y: auto;
             }
-            
+
             .dashboard-sidebar.show {
                 transform: translateX(0);
             }
-            
+
             .sidebar-overlay {
                 display: none;
                 position: fixed;
@@ -115,18 +118,18 @@
                 z-index: 1000;
                 backdrop-filter: blur(2px);
             }
-            
+
             .sidebar-overlay.show {
                 display: block;
             }
         }
-        
+
         .sidebar-menu {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .sidebar-menu-item {
             padding: 0.75rem 1.5rem;
             margin: 0.25rem 0;
@@ -138,13 +141,13 @@
             gap: 0.75rem;
             color: var(--color-text-secondary);
         }
-        
+
         .sidebar-menu-item:hover,
         .sidebar-menu-item.active {
             background-color: var(--color-bg);
             color: var(--color-primary);
         }
-        
+
         .stat-card {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -152,39 +155,39 @@
             padding: 1.5rem;
             transition: all 0.3s ease;
         }
-        
+
         .stat-card:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
-        
+
         .stat-value {
             font-size: 2rem;
             font-weight: 700;
             color: var(--color-text-primary);
             margin: 0.5rem 0;
         }
-        
+
         .stat-label {
             color: var(--color-text-secondary);
             font-size: 0.875rem;
             font-weight: 500;
         }
-        
+
         .stat-change {
             font-size: 0.875rem;
             font-weight: 600;
             margin-top: 0.5rem;
         }
-        
+
         .stat-change.positive {
             color: var(--color-accent);
         }
-        
+
         .stat-change.negative {
             color: #ef4444;
         }
-        
+
         .time-tracker-card {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
             border-radius: 1rem;
@@ -192,14 +195,14 @@
             color: white;
             margin-bottom: 2rem;
         }
-        
+
         .timer-display {
             font-size: 3.5rem;
             font-weight: 700;
             font-variant-numeric: tabular-nums;
             margin: 1rem 0;
         }
-        
+
         .project-select {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -208,12 +211,12 @@
             padding: 0.75rem 1rem;
             width: 100%;
         }
-        
+
         .project-select option {
             background: var(--color-surface);
             color: var(--color-text-primary);
         }
-        
+
         .activity-item {
             padding: 1rem;
             border-bottom: 1px solid var(--color-border);
@@ -221,11 +224,11 @@
             align-items: center;
             gap: 1rem;
         }
-        
+
         .activity-item:last-child {
             border-bottom: none;
         }
-        
+
         .activity-avatar {
             width: 40px;
             height: 40px;
@@ -237,7 +240,7 @@
             color: white;
             font-weight: 600;
         }
-        
+
         .chart-container {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -249,7 +252,7 @@
             justify-content: center;
             color: var(--color-text-secondary);
         }
-        
+
         .team-member-card {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -260,11 +263,11 @@
             gap: 1rem;
             transition: all 0.2s ease;
         }
-        
+
         .team-member-card:hover {
             box-shadow: var(--shadow-sm);
         }
-        
+
         .team-avatar {
             width: 48px;
             height: 48px;
@@ -276,7 +279,7 @@
             color: white;
             font-weight: 600;
         }
-        
+
         .btn-timer {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -286,21 +289,21 @@
             font-weight: 600;
             transition: all 0.2s ease;
         }
-        
+
         .btn-timer:hover {
             background: rgba(255, 255, 255, 0.3);
             color: white;
         }
-        
+
         .btn-timer.stop {
             background: #ef4444;
             border-color: #ef4444;
         }
-        
+
         .btn-timer.stop:hover {
             background: #dc2626;
         }
-        
+
         .project-card {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -308,11 +311,11 @@
             padding: 1.25rem;
             transition: all 0.2s ease;
         }
-        
+
         .project-card:hover {
             box-shadow: var(--shadow-sm);
         }
-        
+
         .progress-bar-custom {
             height: 8px;
             background-color: var(--color-bg);
@@ -320,7 +323,7 @@
             overflow: hidden;
             margin-top: 0.5rem;
         }
-        
+
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
@@ -329,6 +332,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Dashboard Header -->
@@ -338,31 +342,33 @@
                 <div class="d-flex align-items-center gap-3">
                     <button class="sidebar-toggle d-lg-none" id="sidebarToggle" aria-label="Toggle Sidebar">
                         <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                     <a class="dashboard-brand d-flex align-items-center gap-2" href="index.html">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" rx="20" fill="#2563EB"/>
-                            <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">TF</text>
+                            <rect width="100" height="100" rx="20" fill="#2563EB" />
+                            <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold"
+                                fill="white" text-anchor="middle">TF</text>
                         </svg>
                         <span class="text-primary-color">TimeFlow</span>
                     </a>
                 </div>
                 <div class="d-flex align-items-center gap-3">
-                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon" style="display: none;">🌙</span>
-                    </button>
                     <div class="dropdown">
-                        <a class="dropdown-toggle d-flex align-items-center text-decoration-none text-secondary-color" href="#" role="button" aria-expanded="false">
-                            <div class="team-avatar me-2" style="width: 36px; height: 36px; font-size: 0.875rem;">JD</div>
+                        <a class="dropdown-toggle d-flex align-items-center text-decoration-none text-secondary-color"
+                            href="#" role="button" aria-expanded="false">
+                            <div class="team-avatar me-2" style="width: 36px; height: 36px; font-size: 0.875rem;">JD
+                            </div>
                             <span class="fw-600 d-none d-md-inline">John Doe</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item" href="login.html">Logout</a></li>
                         </ul>
                     </div>
@@ -384,51 +390,66 @@
                         <h5 class="fw-600 mb-0">Menu</h5>
                         <button class="sidebar-close-btn" id="sidebarClose" aria-label="Close Sidebar">
                             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
                     <ul class="sidebar-menu">
                         <li class="sidebar-menu-item active">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
                             </svg>
                             Dashboard
                         </li>
                         <li class="sidebar-menu-item">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                             Time Tracker
                         </li>
                         <li class="sidebar-menu-item">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                                </path>
                             </svg>
                             Projects
                         </li>
                         <li class="sidebar-menu-item">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
                             </svg>
                             Team
                         </li>
                         <li class="sidebar-menu-item">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
                             </svg>
                             Reports
                         </li>
                         <li class="sidebar-menu-item">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
                             </svg>
                             Invoices
                         </li>
                         <li class="sidebar-menu-item">
                             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
                             Settings
                         </li>
@@ -441,7 +462,8 @@
                         <!-- Page Header -->
                         <div class="mb-4">
                             <h1 class="h3 fw-700 mb-1">Dashboard</h1>
-                            <p class="text-secondary-color mb-0">Welcome back, John! Here's what's happening with your team today.</p>
+                            <p class="text-secondary-color mb-0">Welcome back, John! Here's what's happening with your
+                                team today.</p>
                         </div>
 
                         <!-- Time Tracker Card -->
@@ -459,14 +481,16 @@
                                     </select>
                                     <div class="d-flex gap-2">
                                         <button class="btn btn-timer" id="startTimer">
-                                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" class="me-2">
-                                                <path d="M8 5v14l11-7z"/>
+                                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"
+                                                class="me-2">
+                                                <path d="M8 5v14l11-7z" />
                                             </svg>
                                             Start Timer
                                         </button>
                                         <button class="btn btn-timer stop" id="stopTimer" style="display: none;">
-                                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" class="me-2">
-                                                <path d="M6 6h12v12H6z"/>
+                                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"
+                                                class="me-2">
+                                                <path d="M6 6h12v12H6z" />
                                             </svg>
                                             Stop Timer
                                         </button>
@@ -522,8 +546,11 @@
                             <div class="col-lg-8">
                                 <div class="chart-container">
                                     <div class="text-center">
-                                        <svg width="60" height="60" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="mb-3 opacity-50">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        <svg width="60" height="60" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" class="mb-3 opacity-50">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                            </path>
                                         </svg>
                                         <p class="mb-0">Time Tracking Chart</p>
                                         <small class="text-secondary-color">Weekly hours breakdown</small>
@@ -538,32 +565,42 @@
                                             <div class="activity-avatar">JD</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600 small">John Doe</div>
-                                                <div class="text-secondary-color small">Started tracking on Website Redesign</div>
-                                                <div class="text-secondary-color" style="font-size: 0.75rem;">2 minutes ago</div>
+                                                <div class="text-secondary-color small">Started tracking on Website
+                                                    Redesign</div>
+                                                <div class="text-secondary-color" style="font-size: 0.75rem;">2 minutes
+                                                    ago</div>
                                             </div>
                                         </div>
                                         <div class="activity-item">
-                                            <div class="activity-avatar" style="background: linear-gradient(135deg, #22C55E, #16a34a);">SM</div>
+                                            <div class="activity-avatar"
+                                                style="background: linear-gradient(135deg, #22C55E, #16a34a);">SM</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600 small">Sarah Miller</div>
                                                 <div class="text-secondary-color small">Completed Mobile App task</div>
-                                                <div class="text-secondary-color" style="font-size: 0.75rem;">15 minutes ago</div>
+                                                <div class="text-secondary-color" style="font-size: 0.75rem;">15 minutes
+                                                    ago</div>
                                             </div>
                                         </div>
                                         <div class="activity-item">
-                                            <div class="activity-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">MJ</div>
+                                            <div class="activity-avatar"
+                                                style="background: linear-gradient(135deg, #f59e0b, #d97706);">MJ</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600 small">Mike Johnson</div>
-                                                <div class="text-secondary-color small">Added 3.5h to Marketing Campaign</div>
-                                                <div class="text-secondary-color" style="font-size: 0.75rem;">1 hour ago</div>
+                                                <div class="text-secondary-color small">Added 3.5h to Marketing Campaign
+                                                </div>
+                                                <div class="text-secondary-color" style="font-size: 0.75rem;">1 hour ago
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="activity-item">
-                                            <div class="activity-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">EW</div>
+                                            <div class="activity-avatar"
+                                                style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">EW</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600 small">Emma Wilson</div>
-                                                <div class="text-secondary-color small">Created new project: Product Research</div>
-                                                <div class="text-secondary-color" style="font-size: 0.75rem;">2 hours ago</div>
+                                                <div class="text-secondary-color small">Created new project: Product
+                                                    Research</div>
+                                                <div class="text-secondary-color" style="font-size: 0.75rem;">2 hours
+                                                    ago</div>
                                             </div>
                                         </div>
                                     </div>
@@ -587,7 +624,8 @@
                                                         <h6 class="fw-600 mb-1">Website Redesign</h6>
                                                         <p class="text-secondary-color small mb-0">Client A</p>
                                                     </div>
-                                                    <span class="badge bg-primary bg-opacity-10 text-primary-color">Active</span>
+                                                    <span
+                                                        class="badge bg-primary bg-opacity-10 text-primary-color">Active</span>
                                                 </div>
                                                 <div class="d-flex justify-content-between small mb-2">
                                                     <span class="text-secondary-color">Progress</span>
@@ -609,7 +647,8 @@
                                                         <h6 class="fw-600 mb-1">Mobile App Dev</h6>
                                                         <p class="text-secondary-color small mb-0">Client B</p>
                                                     </div>
-                                                    <span class="badge bg-success bg-opacity-10 text-success">On Track</span>
+                                                    <span class="badge bg-success bg-opacity-10 text-success">On
+                                                        Track</span>
                                                 </div>
                                                 <div class="d-flex justify-content-between small mb-2">
                                                     <span class="text-secondary-color">Progress</span>
@@ -631,7 +670,8 @@
                                                         <h6 class="fw-600 mb-1">Marketing Q4</h6>
                                                         <p class="text-secondary-color small mb-0">Internal</p>
                                                     </div>
-                                                    <span class="badge bg-warning bg-opacity-10 text-warning">Pending</span>
+                                                    <span
+                                                        class="badge bg-warning bg-opacity-10 text-warning">Pending</span>
                                                 </div>
                                                 <div class="d-flex justify-content-between small mb-2">
                                                     <span class="text-secondary-color">Progress</span>
@@ -653,7 +693,8 @@
                                                         <h6 class="fw-600 mb-1">Product Research</h6>
                                                         <p class="text-secondary-color small mb-0">Internal</p>
                                                     </div>
-                                                    <span class="badge bg-primary bg-opacity-10 text-primary-color">Active</span>
+                                                    <span
+                                                        class="badge bg-primary bg-opacity-10 text-primary-color">Active</span>
                                                 </div>
                                                 <div class="d-flex justify-content-between small mb-2">
                                                     <span class="text-secondary-color">Progress</span>
@@ -687,7 +728,8 @@
                                             <span class="badge bg-success bg-opacity-10 text-success">Active</span>
                                         </div>
                                         <div class="team-member-card">
-                                            <div class="team-avatar" style="background: linear-gradient(135deg, #22C55E, #16a34a);">SM</div>
+                                            <div class="team-avatar"
+                                                style="background: linear-gradient(135deg, #22C55E, #16a34a);">SM</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600">Sarah Miller</div>
                                                 <div class="text-secondary-color small">6.2h today</div>
@@ -695,7 +737,8 @@
                                             <span class="badge bg-success bg-opacity-10 text-success">Active</span>
                                         </div>
                                         <div class="team-member-card">
-                                            <div class="team-avatar" style="background: linear-gradient(135deg, #f59e0b, #d97706);">MJ</div>
+                                            <div class="team-avatar"
+                                                style="background: linear-gradient(135deg, #f59e0b, #d97706);">MJ</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600">Mike Johnson</div>
                                                 <div class="text-secondary-color small">5.8h today</div>
@@ -703,15 +746,18 @@
                                             <span class="badge bg-success bg-opacity-10 text-success">Active</span>
                                         </div>
                                         <div class="team-member-card">
-                                            <div class="team-avatar" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">EW</div>
+                                            <div class="team-avatar"
+                                                style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">EW</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600">Emma Wilson</div>
                                                 <div class="text-secondary-color small">4.5h today</div>
                                             </div>
-                                            <span class="badge bg-secondary bg-opacity-10 text-secondary-color">Away</span>
+                                            <span
+                                                class="badge bg-secondary bg-opacity-10 text-secondary-color">Away</span>
                                         </div>
                                         <div class="team-member-card">
-                                            <div class="team-avatar" style="background: linear-gradient(135deg, #ec4899, #db2777);">RK</div>
+                                            <div class="team-avatar"
+                                                style="background: linear-gradient(135deg, #ec4899, #db2777);">RK</div>
                                             <div class="flex-grow-1">
                                                 <div class="fw-600">Robert Kim</div>
                                                 <div class="text-secondary-color small">3.2h today</div>
@@ -734,7 +780,7 @@
     <script src="assets/js/theme-toggle.js"></script>
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/main.js"></script>
-    
+
     <!-- Timer Script -->
     <script>
         let timerInterval = null;
@@ -742,14 +788,14 @@
         const timerDisplay = document.getElementById('timerDisplay');
         const startBtn = document.getElementById('startTimer');
         const stopBtn = document.getElementById('stopTimer');
-        
+
         function formatTime(totalSeconds) {
             const hours = Math.floor(totalSeconds / 3600);
             const minutes = Math.floor((totalSeconds % 3600) / 60);
             const secs = totalSeconds % 60;
             return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
         }
-        
+
         startBtn.addEventListener('click', () => {
             if (!timerInterval) {
                 timerInterval = setInterval(() => {
@@ -760,7 +806,7 @@
                 stopBtn.style.display = 'block';
             }
         });
-        
+
         stopBtn.addEventListener('click', () => {
             if (timerInterval) {
                 clearInterval(timerInterval);
@@ -771,54 +817,54 @@
                 timerDisplay.textContent = formatTime(0);
             }
         });
-        
+
         // Sidebar Toggle for Mobile/Tablet
         const sidebarToggle = document.getElementById('sidebarToggle');
         const dashboardSidebar = document.getElementById('dashboardSidebar');
         const sidebarOverlay = document.getElementById('sidebarOverlay');
-        
+
         function toggleSidebar() {
             dashboardSidebar.classList.toggle('show');
             sidebarOverlay.classList.toggle('show');
             document.body.style.overflow = dashboardSidebar.classList.contains('show') ? 'hidden' : '';
         }
-        
+
         function closeSidebar() {
             dashboardSidebar.classList.remove('show');
             sidebarOverlay.classList.remove('show');
             document.body.style.overflow = '';
         }
-        
+
         if (sidebarToggle) {
             sidebarToggle.addEventListener('click', toggleSidebar);
         }
-        
+
         if (sidebarOverlay) {
             sidebarOverlay.addEventListener('click', closeSidebar);
         }
-        
+
         const sidebarClose = document.getElementById('sidebarClose');
         if (sidebarClose) {
             sidebarClose.addEventListener('click', closeSidebar);
         }
-        
+
         // Close sidebar when clicking on a menu item (mobile only)
         const sidebarMenuItems = document.querySelectorAll('.sidebar-menu-item');
         sidebarMenuItems.forEach(item => {
             item.addEventListener('click', () => {
-                if (window.innerWidth <= 991.98) {
+                if (window.innerWidth <= 1199.98) {
                     closeSidebar();
                 }
             });
         });
-        
+
         // Close sidebar on window resize if it becomes desktop view
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 991.98) {
+            if (window.innerWidth > 1199.98) {
                 closeSidebar();
             }
         });
     </script>
 </body>
-</html>
 
+</html>

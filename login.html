@@ -10,16 +10,32 @@
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>TF</text></svg>">
+    <style>
+        .auth-theme-toggle {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+    </style>
 </head>
 
 <body class="bg-surface d-flex flex-column min-vh-100">
+
+    <!-- Theme Toggle -->
+    <div class="auth-theme-toggle">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon" style="display: none;">🌙</span>
+        </button>
+    </div>
 
     <!-- Brand Logo and Name - Top Center -->
     <div class="text-center py-4">
         <a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="index.html">
             <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100" height="100" rx="20" fill="#2563EB"/>
-                <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">TF</text>
+                <rect width="100" height="100" rx="20" fill="#2563EB" />
+                <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white"
+                    text-anchor="middle">TF</text>
             </svg>
             <span class="text-primary-color fw-700" style="font-size: 1.5rem;">TimeFlow</span>
         </a>
@@ -31,7 +47,7 @@
             <p class="text-secondary-color">Enter your details to access your account.</p>
         </div>
 
-        <div class="glass-card p-4 rounded-4 shadow-sm border bg-white">
+        <div class="glass-card p-4 rounded-4 shadow-sm border">
             <form>
                 <div class="mb-3">
                     <label class="form-label fw-600 small">Email address</label>
@@ -51,16 +67,17 @@
                 <div class="position-relative mb-4">
                     <hr class="text-secondary-color opacity-25">
                     <span
-                        class="position-absolute top-50 start-50 translate-middle px-2 bg-surface text-secondary-color small bg-white">OR</span>
+                        class="position-absolute top-50 start-50 translate-middle px-2 bg-surface text-secondary-color small">OR</span>
                 </div>
 
                 <button type="button"
                     class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2 mb-3">
                     <span>G</span> Continue with Google
                 </button>
-                
+
                 <div class="text-center pt-3 border-top" style="border-color: var(--color-border) !important;">
-                    <p class="text-secondary-color small mb-0">Don't have an account? <a href="signup.html" class="text-primary-color fw-600 text-decoration-none">Sign up</a></p>
+                    <p class="text-secondary-color small mb-0">Don't have an account? <a href="signup.html"
+                            class="text-primary-color fw-600 text-decoration-none">Sign up</a></p>
                 </div>
             </form>
         </div>
@@ -71,9 +88,7 @@
     </div>
 
     <script src="assets/js/theme-toggle.js"></script>
-    <script>
-        // Force simple theme handling since we don't have full nav
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

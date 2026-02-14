@@ -23,17 +23,17 @@
 }
 
 /* Mobile and Tablet: Solid background in dark mode */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
     [data-theme="dark"] .navbar {
         background-color: var(--color-surface);
         backdrop-filter: none;
     }
-    
+
     [data-theme="dark"] .navbar-collapse {
         background-color: var(--color-surface);
         border-top-color: var(--color-border);
     }
-    
+
     [data-theme="dark"] .navbar-collapse .dropdown-menu {
         background-color: #0F172A;
         border-color: var(--color-border);
@@ -66,20 +66,54 @@
     border-color: var(--color-primary);
 }
 
-/* Glassmorphism for Dark Mode (Pricing & Features ONLY) */
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Glassmorphism for Dark Mode */
 [data-theme="dark"] .feature-card,
-[data-theme="dark"] .pricing-card {
-    background: rgba(255, 255, 255, 0.08);
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .glass-card {
+    background: rgba(255, 255, 255, 0.08) !important;
     /* Required Glass Card Value */
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     box-shadow: none;
 }
 
 [data-theme="dark"] .feature-card:hover,
-[data-theme="dark"] .pricing-card:hover {
-    background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(255, 255, 255, 0.25);
+[data-theme="dark"] .pricing-card:hover,
+[data-theme="dark"] .glass-card:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+[data-theme="dark"] .card-body h3 a,
+[data-theme="dark"] .card-body h5 a {
+    color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .card-body h3 a:hover,
+[data-theme="dark"] .card-body h5 a:hover {
+    color: var(--color-primary);
+}
+
+/* Blog Details / Content Dark Mode */
+[data-theme="dark"] blockquote {
+    color: var(--color-text-primary);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left-color: var(--color-primary) !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+    color: var(--color-text-secondary);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
 }
 
 /* Footer in Dark Mode */
@@ -96,4 +130,100 @@
 
 [data-theme="dark"] .sidebar-overlay {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dashboard Sidebar Highlight in Dark Mode */
+[data-theme="dark"] .sidebar-menu-item:hover,
+[data-theme="dark"] .sidebar-menu-item.active {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #60a5fa !important;
+    /* Lighter blue for better contrast */
+}
+
+/* Enhanced visibility for active nav links in dark mode */
+[data-theme="dark"] .nav-link.active {
+    color: #60a5fa !important;
+    /* Lighter blue for better contrast on dark */
+}
+
+/* Navbar Toggler Visibility in Dark Mode */
+[data-theme="dark"] .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1) brightness(1.5);
+}
+
+/* Dropdown Active/Hover in Dark Mode */
+[data-theme="dark"] .dropdown-item.active,
+[data-theme="dark"] .dropdown-item:active {
+    background-color: var(--color-primary);
+    color: white !important;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary);
+}
+
+/* FAQ / Accordion Dark Mode */
+[data-theme="dark"] .accordion-item {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .accordion-button {
+    background-color: var(--color-surface) !important;
+    color: var(--color-text-primary) !important;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #60a5fa !important;
+}
+
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(2);
+}
+
+[data-theme="dark"] .accordion-body {
+    color: var(--color-text-secondary);
+    background-color: var(--color-surface);
+}
+
+/* Auth & Form Visibility in Dark Mode */
+[data-theme="dark"] .form-label {
+    color: var(--color-text-primary);
+}
+
+[data-theme="dark"] .form-text {
+    color: var(--color-text-secondary);
+}
+
+[data-theme="dark"] .text-primary-color {
+    color: #60a5fa !important;
+    /* Lighter blue for dark backgrounds */
+}
+
+[data-theme="dark"] a.text-primary-color:hover {
+    color: #93c5fd !important;
+    /* Even lighter on hover */
+}
+
+[data-theme="dark"] .bg-surface {
+    background-color: var(--color-surface) !important;
+}
+
+/* Primary Outline Button in Dark Mode */
+[data-theme="dark"] .btn-outline-primary {
+    color: #60a5fa;
+    border-color: #60a5fa;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #60a5fa;
+    border-color: #60a5fa;
+    color: #020617;
 }

@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeFlow - Ultimate Time Tracking for Teams</title>
-    <meta name="description" content="Track time, manage projects, and streamline your workflow with TimeFlow. The best time tracking SaaS for agencies and freelancers.">
-    
+    <meta name="description"
+        content="Track time, manage projects, and streamline your workflow with TimeFlow. The best time tracking SaaS for agencies and freelancers.">
+
     <!-- CSS Assets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/animations.css">
-    
+
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>TF</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563EB'/><text x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>TF</text></svg>">
 </head>
+
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                 <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="100" height="100" rx="20" fill="#2563EB"/>
-                    <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">TF</text>
+                    <rect width="100" height="100" rx="20" fill="#2563EB" />
+                    <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white"
+                        text-anchor="middle">TF</text>
                 </svg>
                 <span class="text-primary-color">TimeFlow</span>
             </a>
-            
-            <button class="navbar-toggler" type="button" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" aria-controls="navbarContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button"
+                            aria-expanded="false">
                             Home
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="homeDropdown">
@@ -62,7 +69,7 @@
                         <a class="nav-link" href="dashboard.html">Dashboard</a>
                     </li>
                 </ul>
-                
+
                 <div class="d-flex align-items-center gap-3">
                     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
                         <span class="icon-sun">☀️</span>
@@ -79,16 +86,17 @@
     <section class="hero-section d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 hero-content">
+                <div class="col-lg-6 mb-5 mb-lg-0 hero-content text-center text-lg-start">
                     <h1 class="hero-title fw-700">
                         Track time.<br>
                         <span class="text-primary-color">Bill hours.</span><br>
                         Get verified.
                     </h1>
                     <p class="hero-subtitle">
-                        Stop guessing where the time goes. Empower your team with intelligent time tracking, automated reporting, and seamless invoicing.
+                        Stop guessing where the time goes. Empower your team with intelligent time tracking, automated
+                        reporting, and seamless invoicing.
                     </p>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
                         <a href="signup.html" class="btn btn-primary btn-lg">Start Free Trial</a>
                         <a href="#features" class="btn btn-outline-primary btn-lg">Learn More</a>
                     </div>
@@ -98,10 +106,11 @@
                         <span>✓ 14-day free trial</span>
                     </div>
                 </div>
-                <div class="col-lg-6 fade-up">
+                <div class="col-lg-6 fade-up text-center">
                     <div class="position-relative">
                         <div class="glass-effect rounded-4 p-2 shadow-lg">
-                            <img src="assets/images/hero/hero-dashboard.png" alt="TimeFlow Dashboard" class="img-fluid rounded-3">
+                            <img src="assets/images/hero/hero-dashboard.png" alt="TimeFlow Dashboard"
+                                class="img-fluid rounded-3">
                         </div>
                     </div>
                 </div>
@@ -112,7 +121,8 @@
     <!-- Trusted By -->
     <section class="py-5 border-top border-bottom" style="border-color: var(--color-border) !important;">
         <div class="container">
-            <p class="text-center text-secondary-color mb-4 small fw-600 text-uppercase tracking-wide">Trusted by 10,000+ forward-thinking teams</p>
+            <p class="text-center text-secondary-color mb-4 small fw-600 text-uppercase tracking-wide">Trusted by
+                10,000+ forward-thinking teams</p>
             <div class="row justify-content-center align-items-center opacity-50 grayscale-logos stagger-container">
                 <div class="col-6 col-md-2 text-center mb-3 mb-md-0 stagger-item">
                     <h4 class="fw-700 m-0">ACME Corp</h4>
@@ -140,41 +150,61 @@
                 <span class="text-primary-color fw-600">Features</span>
                 <h2 class="display-5 fw-700 mt-2">Everything you need to<br>master your time</h2>
             </div>
-            
+
             <div class="row g-4 stagger-container">
                 <!-- Feature 1 -->
                 <div class="col-md-4 stagger-item">
                     <div class="feature-card h-100">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle" style="width: 60px; height: 60px;">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle"
+                            style="width: 60px; height: 60px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </div>
                         <h3 class="h4">Smart Tracking</h3>
-                        <p class="text-secondary-color">Track time automatically with our desktop app or simpler manual entry. Never miss a billable minute again.</p>
-                        <a href="features.html" class="hover-underline fw-600 mt-2 d-inline-block text-primary-color">Learn more →</a>
+                        <p class="text-secondary-color">Track time automatically with our desktop app or simpler manual
+                            entry. Never miss a billable minute.</p>
+                        <a href="features.html"
+                            class="hover-underline fw-600 mt-2 d-inline-block text-primary-color">Learn more →</a>
                     </div>
                 </div>
-                
+
                 <!-- Feature 2 -->
                 <div class="col-md-4 stagger-item">
                     <div class="feature-card h-100">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle" style="width: 60px; height: 60px;">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle"
+                            style="width: 60px; height: 60px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="h4">Detailed Reporting</h3>
-                        <p class="text-secondary-color">Visualize productivity with breakdown charts. Export reports to PDF, CSV, or Excel for clients.</p>
-                        <a href="features.html" class="hover-underline fw-600 mt-2 d-inline-block text-primary-color">View samples →</a>
+                        <p class="text-secondary-color">Visualize productivity with breakdown charts. Export reports to
+                            PDF, CSV, or Excel for clients.</p>
+                        <a href="features.html"
+                            class="hover-underline fw-600 mt-2 d-inline-block text-primary-color">View samples →</a>
                     </div>
                 </div>
-                
+
                 <!-- Feature 3 -->
                 <div class="col-md-4 stagger-item">
                     <div class="feature-card h-100">
-                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle" style="width: 60px; height: 60px;">
-                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle"
+                            style="width: 60px; height: 60px;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="h4">Seamless Invoicing</h3>
-                        <p class="text-secondary-color">Turn tracked hours into professional invoices in one click. Integrate with Stripe, PayPal, and more.</p>
-                        <a href="features.html" class="hover-underline fw-600 mt-2 d-inline-block text-primary-color">See integration →</a>
+                        <p class="text-secondary-color">Turn tracked hours into professional invoices in one click.
+                            Integrate with Stripe, PayPal, and more.</p>
+                        <a href="features.html"
+                            class="hover-underline fw-600 mt-2 d-inline-block text-primary-color">See integration →</a>
                     </div>
                 </div>
             </div>
@@ -182,17 +212,21 @@
     </section>
 
     <!-- Deep Dive -->
-    <section class="section-padding bg-surface border-top border-bottom" style="border-color: var(--color-border) !important;">
+    <section class="section-padding bg-surface border-top border-bottom"
+        style="border-color: var(--color-border) !important;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0 fade-up">
-                    <img src="assets/images/features/feature-analytics.png" alt="Analytics Preview" class="img-fluid rounded-4 shadow-lg glass-effect p-2">
+                    <img src="assets/images/features/feature-analytics.png" alt="Analytics Preview"
+                        class="img-fluid rounded-4 shadow-lg glass-effect p-2">
                 </div>
                 <div class="col-lg-6 ps-lg-5 fade-up">
-                    <span class="badge bg-primary bg-opacity-10 text-primary-color mb-3 px-3 py-2 rounded-pill">New Feature</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary-color mb-3 px-3 py-2 rounded-pill">New
+                        Feature</span>
                     <h2 class="display-6 fw-700 mb-4">See where every minute goes.</h2>
                     <p class="lead text-secondary-color mb-4">
-                        Our advanced analytics engine breaks down your team's time by project, task, and client. Identify bottlenecks before they become problems.
+                        Our advanced analytics engine breaks down your team's time by project, task, and client.
+                        Identify bottlenecks before they become problems.
                     </p>
                     <ul class="list-unstyled mb-4 text-secondary-color">
                         <li class="mb-3 d-flex align-items-center">
@@ -218,46 +252,55 @@
                 <span class="text-primary-color fw-600">Testimonials</span>
                 <h2 class="display-5 fw-700 mt-2">Trusted by teams<br>around the world</h2>
             </div>
-            
+
             <div class="row g-4 stagger-container">
                 <div class="col-md-4 stagger-item">
                     <div class="feature-card h-100">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle me-3" style="width: 48px; height: 48px; font-weight: 600;">SM</div>
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle me-3"
+                                style="width: 48px; height: 48px; font-weight: 600;">SM</div>
                             <div>
                                 <h5 class="fw-600 mb-0">Sarah Miller</h5>
                                 <p class="text-secondary-color small mb-0">CEO, TechStart Inc.</p>
                             </div>
                         </div>
-                        <p class="text-secondary-color mb-3">"TimeFlow has completely transformed how we manage our projects. The insights are incredible and it's so intuitive. Our team productivity increased by 30%."</p>
+                        <p class="text-secondary-color mb-3">"TimeFlow has completely transformed how we manage our
+                            projects. The insights are incredible and it's so intuitive. Our team productivity increased
+                            by 30%."</p>
                         <div class="text-warning">★★★★★</div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 stagger-item">
                     <div class="feature-card h-100">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle me-3" style="width: 48px; height: 48px; font-weight: 600;">MJ</div>
+                            <div class="d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle me-3"
+                                style="width: 48px; height: 48px; font-weight: 600;">MJ</div>
                             <div>
                                 <h5 class="fw-600 mb-0">Mike Johnson</h5>
                                 <p class="text-secondary-color small mb-0">Founder, DesignCo</p>
                             </div>
                         </div>
-                        <p class="text-secondary-color mb-3">"The best time tracking solution we've ever used. The reporting features are outstanding, and our team actually enjoys using it. That's rare for productivity tools!"</p>
+                        <p class="text-secondary-color mb-3">"The best time tracking solution we've ever used. The
+                            reporting features are outstanding, and our team actually enjoys using it. That's rare for
+                            productivity tools!"</p>
                         <div class="text-warning">★★★★★</div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4 stagger-item">
                     <div class="feature-card h-100">
                         <div class="d-flex align-items-center mb-3">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle me-3" style="width: 48px; height: 48px; font-weight: 600;">EW</div>
+                            <div class="d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle me-3"
+                                style="width: 48px; height: 48px; font-weight: 600;">EW</div>
                             <div>
                                 <h5 class="fw-600 mb-0">Emma Wilson</h5>
                                 <p class="text-secondary-color small mb-0">Project Manager, AgencyPro</p>
                             </div>
                         </div>
-                        <p class="text-secondary-color mb-3">"TimeFlow makes project management so much easier. We can see exactly where time is spent and optimize our workflows. The invoicing feature alone saves us hours ."</p>
+                        <p class="text-secondary-color mb-3">"TimeFlow makes project management so much easier. We can
+                            see exactly where time is spent and optimize our workflows. The invoicing feature alone
+                            saves us hours ."</p>
                         <div class="text-warning">★★★★★</div>
                     </div>
                 </div>
@@ -266,14 +309,17 @@
     </section>
 
     <!-- Integrations Section -->
-    <section class="section-padding bg-surface border-top border-bottom" style="border-color: var(--color-border) !important;">
+    <section class="section-padding bg-surface border-top border-bottom"
+        style="border-color: var(--color-border) !important;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0 fade-up">
-                    <span class="badge bg-primary bg-opacity-10 text-primary-color mb-3 px-3 py-2 rounded-pill">Integrations</span>
+                    <span
+                        class="badge bg-primary bg-opacity-10 text-primary-color mb-3 px-3 py-2 rounded-pill">Integrations</span>
                     <h2 class="display-6 fw-700 mb-4">Works seamlessly with your favorite tools</h2>
                     <p class="lead text-secondary-color mb-4">
-                        TimeFlow integrates with 50+ popular apps and services. Connect your existing workflow and start tracking time without disrupting your process.
+                        TimeFlow integrates with 50+ popular apps and services. Connect your existing workflow and start
+                        tracking time without disrupting your process.
                     </p>
                     <ul class="list-unstyled mb-4 text-secondary-color">
                         <li class="mb-3 d-flex align-items-center">
@@ -295,9 +341,11 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <div class="feature-card text-center p-4 h-100">
-                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle" style="width: 60px; height: 60px;">
+                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle"
+                                    style="width: 60px; height: 60px;">
                                     <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                                 <h6 class="fw-600 mb-2">Slack</h6>
@@ -306,9 +354,11 @@
                         </div>
                         <div class="col-6">
                             <div class="feature-card text-center p-4 h-100">
-                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle" style="width: 60px; height: 60px;">
+                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-success bg-opacity-10 text-success rounded-circle"
+                                    style="width: 60px; height: 60px;">
                                     <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                                 <h6 class="fw-600 mb-2">Asana</h6>
@@ -317,9 +367,11 @@
                         </div>
                         <div class="col-6">
                             <div class="feature-card text-center p-4 h-100">
-                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle" style="width: 60px; height: 60px;">
+                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-warning bg-opacity-10 text-warning rounded-circle"
+                                    style="width: 60px; height: 60px;">
                                     <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                                 <h6 class="fw-600 mb-2">Stripe</h6>
@@ -328,9 +380,11 @@
                         </div>
                         <div class="col-6">
                             <div class="feature-card text-center p-4 h-100">
-                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle" style="width: 60px; height: 60px;">
+                                <div class="mb-3 d-inline-flex align-items-center justify-content-center bg-primary bg-opacity-10 text-primary-color rounded-circle"
+                                    style="width: 60px; height: 60px;">
                                     <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
                                 <h6 class="fw-600 mb-2">Google Calendar</h6>
@@ -346,9 +400,11 @@
     <!-- CTA Section -->
     <section class="section-padding text-center">
         <div class="container">
-            <div class="bg-primary rounded-4 p-5 text-white fade-up" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
+            <div class="bg-primary rounded-4 p-5 text-white fade-up"
+                style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);">
                 <h2 class="fw-700 mb-3 text-white">Ready to take control of your time?</h2>
-                <p class="mb-4 opacity-90" style="max-width: 600px; margin: 0 auto;">Join 10,000+ teams who have switched to TimeFlow. Start your 14-day free trial today.</p>
+                <p class="mb-4 opacity-90" style="max-width: 600px; margin: 0 auto;">Join 10,000+ teams who have
+                    switched to TimeFlow. Start your 14-day free trial today.</p>
                 <div class="d-flex justify-content-center gap-3">
                     <a href="signup.html" class="btn bg-white text-primary-color fw-700 border-0">Get Started Free</a>
                     <a href="contact.html" class="btn btn-outline-light">Contact Sales</a>
@@ -364,33 +420,39 @@
                 <div class="col-lg-4">
                     <a href="index.html" class="footer-brand d-flex align-items-center gap-2">
                         <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="100" height="100" rx="20" fill="#2563EB"/>
-                            <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">TF</text>
+                            <rect width="100" height="100" rx="20" fill="#2563EB" />
+                            <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold"
+                                fill="white" text-anchor="middle">TF</text>
                         </svg>
                         <span class="text-primary-color">TimeFlow</span>
                     </a>
                     <p class="text-secondary-color mb-4">
-                        The simple, powerful time tracking software for modern teams. Built for agencies, freelancers, and startups.
+                        The simple, powerful time tracking software for modern teams. Built for agencies, freelancers,
+                        and startups.
                     </p>
                     <div class="d-flex gap-2">
                         <a href="#" class="social-link" aria-label="Twitter">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                             </svg>
                         </a>
                         <a href="#" class="social-link" aria-label="LinkedIn">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                         </a>
                         <a href="#" class="social-link" aria-label="Facebook">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
                         <a href="#" class="social-link" aria-label="Instagram">
                             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
                     </div>
@@ -418,7 +480,8 @@
                     </form>
                 </div>
             </div>
-            <div class="border-top pt-4 text-center text-secondary-color small" style="border-color: var(--color-border) !important;">
+            <div class="border-top pt-4 text-center text-secondary-color small"
+                style="border-color: var(--color-border) !important;">
                 <p>&copy; 2026 TimeFlow SaaS. All rights reserved.</p>
             </div>
         </div>
@@ -432,4 +495,5 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
